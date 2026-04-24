@@ -9,6 +9,7 @@ import { Formulario } from "./components/Formulario"
 import { MensajeCondicional } from "./components/MensajeCondicional"
 import { MensajeConsola } from "./components/MensajeConsola"
 import { ContadorEfect } from "./components/ContadorEfect"
+import { Consumo } from "./components/Consumo"
 
 function App() {
 
@@ -41,6 +42,9 @@ function App() {
       <MensajeConsola/>
       <h3>Contador con useEffect</h3>
       <ContadorEfect/>
+      <hr />
+      <h3>Consumo Api</h3>
+      <Consumo/>
     </div>
   )
 }
