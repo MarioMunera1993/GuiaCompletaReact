@@ -6,6 +6,9 @@ import { Props } from "./components/Props"
 import Contador from "./components/Contador"
 import { InputTexto } from "./components/InputTexto"
 import { Formulario } from "./components/Formulario"
+import { MensajeCondicional } from "./components/MensajeCondicional"
+import { MensajeConsola } from "./components/MensajeConsola"
+import { ContadorEfect } from "./components/ContadorEfect"
 
 function App() {
 
@@ -30,6 +33,14 @@ function App() {
       <InputTexto/>
       <h3>Manjando Formularios, Multiples inputs</h3>
       <Formulario/>
+      <h3>Mensaje condicional</h3>
+      <MensajeCondicional/>
+      <hr />
+      <h2>Uso de useEffect</h2>
+      <h3>Mensaje Consola</h3>
+      <MensajeConsola/>
+      <h3>Contador con useEffect</h3>
+      <ContadorEfect/>
     </div>
   )
 }

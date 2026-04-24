@@ -368,3 +368,41 @@ export default PerfilUsuario;
 ```
 
 **Casos de uso:** Contadores, formularios, listas dinámicas, datos de usuario, etc.
+
+#### useEffect
+
+Se usa para ejecutar efectos secundarios en componentes funcionales, como llamadas a APIs, suscripciones o manipulación del DOM.
+este componente se ejecuta antes que todo desde el mismo renderizado de la pagina
+
+**Sintaxis:**
+```jsx
+  useEffect(()=>{
+
+  },[])
+```
+
+**Ejemplo:**
+```jsx
+import React, { useState, useEffect } from 'react';
+
+function Usuario({ id }) {
+  const [usuario, setUsuario] = useState(null);
+
+  useEffect(() => {
+    // Simular llamada a API
+    fetch(`https://api.example.com/usuario/${id}`)
+      .then(response => response.json())
+      .then(data => setUsuario(data));
+  }, [id]); // Se ejecuta cuando cambia 'id'
+
+  return (
+    <div>
+      {usuario ? <p>Nombre: {usuario.nombre}</p> : <p>Cargando...</p>}
+    </div>
+  );
+}
+
+export default Usuario;
+```
+
+**Casos de uso:** Cargar datos de APIs, suscripciones a eventos, timers.
